@@ -13,8 +13,10 @@ module Process exposing
 ## Future Plans
 
 Right now, this library is pretty sparse. For example, there is no public API
-for processes to communicate with each other. This is a really important
-ability, but it is also something that is extraordinarily easy to get wrong!
+for processes to communicate with each other (to be clear, this means you can't
+even return a value from a subprocess created via `spawn` to your main process).
+This is a really important ability, but it is also something that is 
+extraordinarily easy to get wrong!
 
 I think the trend will be towards an Erlang style of concurrency, where every
 process has an “event queue” that anyone can send messages to. I currently
